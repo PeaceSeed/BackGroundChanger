@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Changer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div style="text-align: center;">
+                    <h1 class="m-4">BackGround Changer</h1>
+                    <button type="button" id="Primary" class="btn btn-primary m-1">Primary</button>
+                    <button type="button" id="Success"  class="btn btn-success m-1">Success</button>
+                    <button type="button" id="Info"  class="btn btn-info m-1">Info</button>
+                    <button type="button" id="Warning"  class="btn btn-warning">Warning</button>
+                    <button type="button" id="Danger"  class="btn btn-danger m-1">Danger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var buttons = document.querySelectorAll(".btn");    
+    buttons.forEach(function(button){
+        button.addEventListener("click", function(e){
+            if (e.target.id == "Primary"){
+                document.body.style.backgroundColor = "#007bff";
+                document.querySelector(".card").style.backgroundColor = "#007bff"
+            }else if(e.target.id == "Success"){
+                document.body.style.backgroundColor = "#28a745";
+                document.querySelector(".card").style.backgroundColor = "#28a745"
+            }
+            else if(e.target.id == "Info"){
+                document.body.style.backgroundColor = "#18a2b8";
+                document.querySelector(".card").style.backgroundColor = "#18a2b8"
+            }
+            else if(e.target.id == "Warning"){
+                document.body.style.backgroundColor = "#ffc108";
+                document.querySelector(".card").style.backgroundColor = "#ffc108"
+            }
+            else if(e.target.id == "Danger"){
+                document.body.style.backgroundColor = "#dc3645";
+                document.querySelector(".card").style.backgroundColor = "#dc3645"
+            }
+            
+        })
+    })
+</script>
+
+</html>
